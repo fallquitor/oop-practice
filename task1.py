@@ -1,10 +1,13 @@
 class Soda():
     """Газированная вода"""
-    def __init__(self, add = None):
-        self.add = add
+    def __init__(self, addit):
+        if isinstance(addit, str):
+            self.addit = addit
+        else:
+            self.addit
 
-    def show_my_drink():
-        if add != None:
-            print("Газировка " + self.add)
-
-soda = Soda(add = input("Что хотите добавить? "))
+    def show_my_drink(self):
+        if self.addit:
+            print(f'Газировка и {self.addit}')
+        else:
+            print("Обычная газировка")
